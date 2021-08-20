@@ -9,13 +9,10 @@ and <img src="https://render.githubusercontent.com/render/math?math=m \in \{1000
 where <img src="https://render.githubusercontent.com/render/math?math=n"> is the number of samples and
 <img src="https://render.githubusercontent.com/render/math?math=m"> is the number of variants (SNPs).
 
-Results do not include ALStructure's execution time on datasets of
-50000 samples due to resources limitation (for 1000 SNPs, execution was halted after >13 hours
-without convergence being achieved). While TeraStructure and Neural ADMIXTURE are able to handle large number of samples (>50000), ALStructure
-does not scale well with the number of samples, which can be seen in the plots where the number of SNPs are being fixed.
+Results do not include ALStructure's execution time on datasets of 50000 samples because ALStructure is so slow on such datasets. (For 1000 SNPs, execution was halted after >13 hours without convergence being achieved.) While TeraStructure and Neural ADMIXTURE are able to handle large number of samples (>50000), ALStructure is not capable of handling such numbers of samples, as seen in the plots where the number of SNPs are being fixed.
 
-Results, which can be observed below, show that Neural ADMIXTURE is consistently faster than ALStructure and TeraStructure, specially for larger datasets.
-Moreover, Neural ADMIXTURE apparently scales much better than the other methods when using GPUs.
+Results, which can be observed below, show that Neural ADMIXTURE is consistently far faster than ALStructure and TeraStructure, especially for larger datasets, which is the area of application of all the methods. Moreover, and not surprisingly, Neural ADMIXTURE scales even better than the other methods when using GPUs.
+
 
 ## Fixed number of samples
 ![fixed_samples_1000](https://user-images.githubusercontent.com/88712503/130130307-8e5a296a-eccf-4f5c-8562-d48f1f9b8591.png)
